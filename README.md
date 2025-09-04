@@ -66,7 +66,7 @@ Step 6 → Creation of deployment and service for EKS
 Step 7 → Destroy all the Infrastructure
 
 Let’s do it
-Step 1 → Login and basics setup
+** Step 1 → Login and basics setup **
 
 1.login into your aws account as a root user
 
@@ -82,7 +82,7 @@ a. sudo su
 
 b. apt update -y
 
-Step 2 → Setup Docker ,Terraform ,AWS cli , and Kubectl
+** Step 2 → Setup Docker ,Terraform ,AWS cli , and Kubectl **
 
 1.Setup Docker---> apt install docker.io
 
@@ -91,7 +91,7 @@ Step 2 → Setup Docker ,Terraform ,AWS cli , and Kubectl
 3. newgrp docker
 
 
-Setup Terraform -->
+** Setup Terraform --> **
 
 1.sudo apt install wget -y
 
@@ -100,7 +100,7 @@ echo “deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https:
 
 3.sudo apt update && sudo apt install terraform -y
 
-Setup AWS cli -->
+** Setup AWS cli --> **
 
 Aws using your computer’s command lines instead of clicking around on a website. It helps you do things like telling AWS to create or manage stuff, all by typing commands in a special language your computer understands. It’s like giving orders to AWS with your keyboard instead of a mouse.
 
@@ -113,7 +113,7 @@ Aws using your computer’s command lines instead of clicking around on a websit
 4.sudo ./aws/install
 
 
-Setup kubectl -→
+** Setup kubectl -→ **
 
 1.sudo apt install curl -y
 
@@ -122,7 +122,7 @@ Setup kubectl -→
 3.sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 
-Step 3 → IAM Role for EC2
+** Step 3 → IAM Role for EC2 **
 
 Why we need IAM role for EC2 → It is used by your ec2 instance to create EKS cluster and manage s3 bucket by applying this IAM role it gives the authenticity to your ec2 to do changes in aws account
 
@@ -140,7 +140,7 @@ Why we need IAM role for EC2 → It is used by your ec2 instance to create EKS c
   
 7. click on create role option and your IAM role is created
 
-Step 4 →Attach IAM role with your EC2
+** Step 4 →Attach IAM role with your EC2 **
 
 1.go to EC2 section
 
@@ -150,7 +150,7 @@ Step 4 →Attach IAM role with your EC2
 
 Now everything is done what we have to do is just throw and some commands and build our infrastructure using terraform to run super mario
 
-Step 5 → Building Infrastructure Using terraform
+** Step 5 → Building Infrastructure Using terraform **
 
 1.Clone the GitHub repo by →
 
@@ -158,7 +158,7 @@ a. mkdir super_mario
 
 b. cd super_mario
 
-c. git clone https://github.com/NotHarshhaa/Deployment-of-super-Mario-on-Kubernetes-using-terraform.git
+c. git clone https://github.com/vishnubongoni/Project-6-Deploying-Super-Mario-on-AWS-EKS-using-Terraform.git
 
 d. cd Deployment-of-super-Mario-on-Kubernetes-using-terraform/
 
@@ -184,7 +184,7 @@ It takes your 5 to 10 min for completion
 
 ``` aws eks update-kubeconfig --name EKS_CLOUD --region us-east-1 ```
 
-Step 6 → Creation of deployment and service for EKS
+** Step 6 → Creation of deployment and service for EKS **
 
 1.change the directory where deployment and service files are stored use the command → cd ..
 
@@ -209,14 +209,14 @@ copy the load balancer ingress and paste it on browser and your game is running
 Play and Enjoy but don’t forget to destroy everything that’s saves of aws bill and you aws account too
 
 
-Load Balancer Ingress →
+ ** Load Balancer Ingress → **
 It is a mechanism that helps distribute incoming internet traffic among multiple servers or services, ensuring efficient and reliable delivery of requests.
 
 It’s like having a receptionist at a busy office building entrance who guides visitors to different floors or departments, preventing overcrowding at any one location. In the digital world, a Load Balancer Ingress helps maintain a smooth user experience, improves application performance, and ensures that no single server becomes overwhelmed with too much traffic.
 
 
 
-Step 7 → Destroy all the Infrastructure
+** Step 7 → Destroy all the Infrastructure **
 
 1 . Below commands delete your deployment and service
 
@@ -233,4 +233,4 @@ after 3 -5 mins all things are destroyed
 
 3. Now go to your EC2 and terminate your Instance
 
-Done... CONGRATULATIONS....
+Done... ** CONGRATULATIONS.... **
