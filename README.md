@@ -66,7 +66,7 @@ Step 6 → Creation of deployment and service for EKS
 Step 7 → Destroy all the Infrastructure
 
 Let’s do it
-** Step 1 → Login and basics setup **
+**Step 1 → Login and basics setup**
 
 1.login into your aws account as a root user
 
