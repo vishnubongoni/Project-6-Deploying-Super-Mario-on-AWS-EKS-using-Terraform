@@ -66,6 +66,7 @@ Step 6 → Creation of deployment and service for EKS
 Step 7 → Destroy all the Infrastructure
 
 Let’s do it
+----------------------------------------------------------------------------------------------------
 **Step 1 → Login and basics setup**
 
 1.login into your aws account as a root user
@@ -81,8 +82,8 @@ Let’s do it
 a. sudo su
 
 b. apt update -y
-
-** Step 2 → Setup Docker ,Terraform ,AWS cli , and Kubectl **
+------------------------------------------------------------------------------------------------------
+**Step 2 → Setup Docker ,Terraform ,AWS cli , and Kubectl**
 
 1.Setup Docker---> apt install docker.io
 
@@ -120,7 +121,7 @@ Aws using your computer’s command lines instead of clicking around on a websit
 2.curl -LO https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl
 
 3.sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Step 3 → IAM Role for EC2**
 
@@ -140,6 +141,8 @@ Why we need IAM role for EC2 → It is used by your ec2 instance to create EKS c
   
 7. click on create role option and your IAM role is created
 
+---------------------------------------------------------------------------------------------------------------------------------------------
+
 **Step 4 →Attach IAM role with your EC2**
 
 1.go to EC2 section
@@ -149,6 +152,8 @@ Why we need IAM role for EC2 → It is used by your ec2 instance to create EKS c
 3. choose the role from dropdown and click on update IAM role
 
 Now everything is done what we have to do is just throw and some commands and build our infrastructure using terraform to run super mario
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Step 5 → Building Infrastructure Using terraform**
 
@@ -184,6 +189,8 @@ It takes your 5 to 10 min for completion
 
 ``` aws eks update-kubeconfig --name EKS_CLOUD --region us-east-1 ```
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 **Step 6 → Creation of deployment and service for EKS**
 
 1.change the directory where deployment and service files are stored use the command → cd ..
@@ -214,7 +221,7 @@ It is a mechanism that helps distribute incoming internet traffic among multiple
 
 It’s like having a receptionist at a busy office building entrance who guides visitors to different floors or departments, preventing overcrowding at any one location. In the digital world, a Load Balancer Ingress helps maintain a smooth user experience, improves application performance, and ensures that no single server becomes overwhelmed with too much traffic.
 
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Step 7 → Destroy all the Infrastructure**
 
