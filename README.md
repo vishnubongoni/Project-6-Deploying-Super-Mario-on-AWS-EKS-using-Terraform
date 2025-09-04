@@ -202,6 +202,7 @@ It takes your 5 to 10 min for completion
 2.create the deployment
 
 ``` kubectl apply -f deployment.yaml ```
+
 3. Now create the service
 
 ``` kubectl apply -f service.yaml ```
@@ -238,6 +239,7 @@ It’s like having a receptionist at a busy office building entrance who guides 
 2. After service and deployment destruction let’s destroy the infrastructure by the following command it will delete your EKS cluster
 
 cd EKS-TF
+
 terraform destroy --auto-approve
 
 after 3 -5 mins all things are destroyed
