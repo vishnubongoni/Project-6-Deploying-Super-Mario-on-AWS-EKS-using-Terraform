@@ -66,6 +66,7 @@ Step 6 → Creation of deployment and service for EKS
 Step 7 → Destroy all the Infrastructure
 
 Let’s do it
+
 ----------------------------------------------------------------------------------------------------
 **Step 1 → Login and basics setup**
 
@@ -82,7 +83,9 @@ Let’s do it
 a. sudo su
 
 b. apt update -y
+
 ------------------------------------------------------------------------------------------------------
+
 **Step 2 → Setup Docker ,Terraform ,AWS cli , and Kubectl**
 
 1.Setup Docker---> apt install docker.io
@@ -121,6 +124,7 @@ Aws using your computer’s command lines instead of clicking around on a websit
 2.curl -LO https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl
 
 3.sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Step 3 → IAM Role for EC2**
